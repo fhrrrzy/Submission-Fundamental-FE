@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body class="font-poppins bg-slate-950">
+    <div id="wrapper-blur" class="backdrop-blur-sm bg-black/10 absolute top-0 w-full h-full">
+        <header class="flex justify-between items-center p-10">
+            <a href="">
+                <img src="./images/logo.svg" alt="" srcset="">
+            </a>
+            <nav>
+                <ul class="flex gap-3">
+                    <li>
+                        <a href="" class="text-slate-50 group hover:text-slate-300 duration-300 w-fit relative">
+                            Home
+                            <div class="absolute -bottom-1 left-0 w-0 h-[1px] group-hover:w-full duration-300 bg-slate-300"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="text-slate-50 group hover:text-slate-300 duration-300 w-fit relative">
+                            Character
+                            <div class="absolute -bottom-1 left-0 w-0 h-[1px] group-hover:w-full duration-300 bg-slate-300"></div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero" class="items-center grid grid-cols-1 px-10">
+                <div class="basis-12">
+                    <h1 class="text-slate-50 text-5xl font-bold">Rick & Morty Database</h1>
+                    <p class="text-slate-400">Made for dicoding submission based on <a href="https://rickandmortyapi.com/documentation/#get-all-characters">Rick and Morty Api</a></p>
+                </div>
+                <div class="basis-12">
+                    <img src="./images/hero.png" alt="" class="w-full invert scale-75">
+                </div>
+            </section>
+
+            <hr class="w-1/2 mx-auto border-slate-500">
+
+            <section id="character" class="p-10">
+                <div id="section-header" class="flex justify-between items-center mb-5">
+                    <h2 class="text-slate-100 text-3xl font-bold">Character</h2>
+                    <form action="">
+                        <label for="status" class="text-slate-100">Status : </label>
+                        <select name="" id="status" class="rounded-lg p-1 bg-slate-800 text-slate-200">
+                            <option value="all">All</option>
+                            <option value="alive">Alive</option>
+                            <option value="dead">Dead</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </form>
+                </div>
+
+                <character-list>
+
+                </character-list>
+            </section>
+        </main>
+    </div>
+
+    <div id="backdrop" class="flex items-center justify-center w-full h-screen fixed top-0 left-0 backdrop-blur-sm bg-black/80 duration-300 p-3 hidden">
+        <div id="modal-detail" class="bg-slate-950 border-[1px] border-slate-800 p-5 rounded-lg w-fit">
+            <character-modal></character-modal>
+        </div>
+    </div>
+</body>
+</html>
