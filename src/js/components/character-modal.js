@@ -38,7 +38,7 @@ class CharacterModal extends HTMLElement {
 			<div class="text-slate-400">
 				<h3 class="font-semibold text-slate-200 text-lg">Location</h3>
 				<hr class="border-slate-700 my-2">
-				<div class="grid grid-cols-2">
+				<div class="grid grid-cols-2 gap-10">
 					<div class="">
 						<div class="text-slate-200">Origin</div>
 						<div class="">${this._character.origin.name}</div>

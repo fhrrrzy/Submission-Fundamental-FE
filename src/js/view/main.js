@@ -1,7 +1,7 @@
 import DataSource from "../data/data";
 import { hideBackdrop } from "../view/modal.js";
 
-export default function main() {
+const main = () => {
   const prevButtonEl = document.getElementById("prev-button");
   const nextButtonEl = document.getElementById("next-button");
   const statusEl = document.getElementById("status");
@@ -71,3 +71,6 @@ export default function main() {
   const modalBackdrop = document.getElementById("backdrop");
   modalBackdrop.addEventListener("click", hideBackdrop);
 }
+
+
+export default main
