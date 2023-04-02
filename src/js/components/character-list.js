@@ -1,14 +1,28 @@
 import "./character-item.js";
+import { hideModalDetail, showBackdrop, showSpinner } from '../view/modal.js';
+import DataSource from '../data/data';
 
 class CharacterList extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+    this.addEventListener("click", this.handleClick);
+  }
 
-    set characters(characters) {
-        this._characters = characters;
-        this.render();
+  set characters(characters) {
+    this._characters = characters;
+    this.render();
+  }
+
+  handleClick(event) {
+    const characterItem = event.target.closest("character-item");
+    if (characterItem) {
+      const characterId = characterItem.querySelector('div').getAttribute("data-id");
+      hideModalDetail()
+      showBackdrop()
+      showSpinner()
+      DataSource.getCharacterById(characterId)
     }
+  }
 
   render() {
     const characterItems = this._characters
