@@ -72,6 +72,20 @@ class DataSource {
   static getNextLink = () => {
     return localStorageUtil.get('nextLink');
   };
+
+  static setStatus = (status) => {
+    localStorageUtil.set('status', status);
+  }
+  
+  static getStatus = () => {
+    let status = localStorageUtil.get('status');
+    if (!status) {
+      status = null;
+      localStorageUtil.set('status', status);
+    }
+    return status;
+  }
+  
 }
 
 export default DataSource;

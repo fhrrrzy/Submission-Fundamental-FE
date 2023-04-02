@@ -46,7 +46,7 @@
             <section id="character" class="p-10">
                 <div id="section-header" class="flex justify-between items-center mb-5">
                     <h2 class="text-slate-100 text-3xl font-bold">Character</h2>
-                    <form action="">
+                    <form action="" id="">
                         <label for="status" class="text-slate-100">Status : </label>
                         <select name="" id="status" class="rounded-lg p-1 bg-slate-800 text-slate-200">
                             <option value="all">All</option>
@@ -56,6 +56,10 @@
                         </select>
                     </form>
                 </div>
+
+                <form action="" class="mb-5">
+                    <input type="text" placeholder="Search by name" id="search-input" class="w-full bg-slate-800 border-2 border-slate-900 px-3 py-2 rounded-lg text-slate-100">
+                </form>
 
                 <character-list>
 
