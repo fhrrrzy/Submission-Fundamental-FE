@@ -44,7 +44,7 @@ export default function main() {
       DataSource.getCharacter(getStatusValue(), searchValue).then(() =>
         disableButton()
       );
-    }, 500)
+    }, 300)
   );
 
   // change status event
