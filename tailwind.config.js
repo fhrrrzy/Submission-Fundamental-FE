@@ -13,7 +13,7 @@ module.exports = {
         },
       },
       animation: {
-        spinnerspinslow: 'spinnerspin 2s linear infinite',
+        spinnerspinslow: 'spinnerspin 0.5s linear infinite',
       },
     },
   },

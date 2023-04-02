@@ -40,8 +40,7 @@ export default function main() {
   searchInputEl.addEventListener(
     "keyup",
     debounce(() => {
-      const searchValue = searchInputEl.value;
-      DataSource.getCharacter(getStatusValue(), searchValue).then(() =>
+      DataSource.getCharacter(getStatusValue(), getSearchValue()).then(() =>
         disableButton()
       );
     }, 300)
@@ -51,13 +50,18 @@ export default function main() {
   statusEl.addEventListener("change", () => {
     const statusValue = getStatusValue();
     DataSource.setStatus(statusValue);
-    DataSource.getCharacter(statusValue).then(() => disableButton());
+    DataSource.getCharacter(statusValue, getSearchValue()).then(() => disableButton());
   });
 
   const getStatusValue = () => {
     const statusValue = statusEl.value == "all" ? null : statusEl.value;
     return statusValue;
   };
+
+  const getSearchValue = () => {
+    const searchValue = searchInputEl.value
+    return searchValue
+  }
 
   const disableButton = () => {
     prevButtonEl.disabled = DataSource.getPreviousLink() == null;
